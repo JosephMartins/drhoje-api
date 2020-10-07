@@ -11,7 +11,7 @@ use App\Matricula;
 class AlunoController extends Controller
 {
 
-    public function add(Request $request){
+    public function create(Request $request){
         \DB::beginTransaction();
         try{
             $aluno = new Aluno();

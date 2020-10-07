@@ -19,7 +19,7 @@ class NotaController extends Controller
       }
     }
 
-    public function add(Request $request){
+    public function create(Request $request){
         try{
             $nota = new Nota();
 

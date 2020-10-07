@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::namespace('Api')->group(function(){
-  Route::post('/aluno/create', 'AlunoController@add');
+  Route::post('/aluno', 'AlunoController@create');
 
   Route::get('/aluno', 'AlunoController@list');
   Route::get('/aluno/{id}', 'AlunoController@selectById');
@@ -31,7 +31,7 @@ Route::namespace('Api')->group(function(){
 
 
 Route::namespace('Api')->group(function(){
-  Route::post('/nota/add', 'NotaController@add');
+  Route::post('/nota', 'NotaController@create');
 
   Route::get('/nota/{aluno_id}', 'NotaController@selectNotaById');
 
@@ -39,23 +39,23 @@ Route::namespace('Api')->group(function(){
 
 
 Route::namespace('Api')->group(function(){
-    Route::post('/escolas/cadastro', 'EscolaController@create');
+    Route::post('/escola', 'EscolaController@create');
 
-    Route::get('/escolas/listar', 'EscolaController@list');
+    Route::get('/escola', 'EscolaController@list');
 
-    Route::put('/escolas/alterar/{id}', 'EscolaController@update');
+    Route::put('/escola/{id}', 'EscolaController@update');
 
-    Route::delete('/escolas/deletar/{id}', 'EscolaController@delete');
+    Route::delete('/escola/{id}', 'EscolaController@delete');
 });
 
 
 Route::namespace('Api')->group(function(){
-    Route::post('/turma/cadastro', 'TurmaController@create');
+    Route::post('/turma', 'TurmaController@create');
 
-    Route::get('/turma/list', 'TurmaController@list');
+    Route::get('/turma', 'TurmaController@list');
 
-    Route::put('/turma/update/{id}', 'TurmaController@update');
+    Route::put('/turma/{id}', 'TurmaController@update');
 
-    Route::delete('/turma/delete/{id}', 'TurmaController@delete');
+    Route::delete('/turma/{id}', 'TurmaController@delete');
 });
 
